@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/langquiz/static/css/main.5f361e03.chunk.css",
+    "main.js": "/langquiz/static/js/main.139e3c60.chunk.js",
+    "main.js.map": "/langquiz/static/js/main.139e3c60.chunk.js.map",
+    "runtime-main.js": "/langquiz/static/js/runtime-main.b387acd0.js",
+    "runtime-main.js.map": "/langquiz/static/js/runtime-main.b387acd0.js.map",
+    "static/js/2.87ded822.chunk.js": "/langquiz/static/js/2.87ded822.chunk.js",
+    "static/js/2.87ded822.chunk.js.map": "/langquiz/static/js/2.87ded822.chunk.js.map",
+    "index.html": "/langquiz/index.html",
+    "precache-manifest.d3a829873e048b3339d45aa13cfeba07.js": "/langquiz/precache-manifest.d3a829873e048b3339d45aa13cfeba07.js",
+    "service-worker.js": "/langquiz/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/langquiz/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.87ded822.chunk.js.LICENSE.txt": "/langquiz/static/js/2.87ded822.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/langquiz/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b387acd0.js",
+    "static/js/2.87ded822.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.139e3c60.chunk.js"
+  ]
+}
