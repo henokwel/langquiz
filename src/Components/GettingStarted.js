@@ -27,7 +27,7 @@ function UserInfo(props) {
         <>
             <label>
                 Name:
-        <input value={props.username} onChange={(e) => props.setUsername(e.target.value)} />
+        <input value={props.username} onChange={(e) => props.setUsername(e.target.value)} required />
 
             </label>
             <label>
