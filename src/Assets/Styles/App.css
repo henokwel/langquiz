@@ -1,5 +1,34 @@
 .App {
   text-align: center;
+  padding-top: 20px;
+  width: 80vh;
+  height: 50vh;
+  background-color: #fbde3f;
+
+}
+
+.propsTo{
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  padding: 5px;
+  background-color: rgb(3, 104, 16);
+  
+}
+a {
+  text-decoration: none;
+  font-size: 17px;
+  font-style: italic;
+  color: white;
+  
+}
+
+
+
+#intro_h2{
+
+font-family: 'Roboto Slab', serif;
+font-size: clamp(1.5rem,3vw,50px);
 }
 
 .App-logo {

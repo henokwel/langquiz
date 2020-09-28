@@ -8,7 +8,7 @@ function Quiz(props) {
     const [answers, setAnswer] = useState([])
     const [error, setError] = useState(false)
 
-    const qArr = Q.map(item => item)
+    const questionsArray = Q.map(item => item)
 
     const onNext = (e) => {
         const findAnsweer = answers.filter(item => item.id === e.qId)[0]
@@ -32,6 +32,7 @@ function Quiz(props) {
 
     return (
         <div>
+            
             <h1>Welcome {props.username}</h1>
             <form onSubmit={(e) => onSubmit(e)}>
                 {error ? <h3>You forgot to answer a question</h3> : ""}
@@ -40,7 +41,7 @@ function Quiz(props) {
                         <>
                             {
                                 answers.map(item => {
-                                    const q = qArr.filter(qItem => qItem.id === item.id)[0]
+                                    const q = questionsArray.filter(qItem => qItem.id === item.id)[0]
                                     return (
                                         <div>
                                             <p>{q.q}</p>
@@ -54,36 +55,21 @@ function Quiz(props) {
                         :
                         <>
                             <label>
-                                {qArr[curretnQ].q}
-                                <select onChange={(e) => onChange({ id: qArr[curretnQ].id, answer: e.target.value, right: qArr[curretnQ].answer, score: e.target.value === qArr[curretnQ].answer ? 1 : 0 })}  >
-                                    <option>Select option</option>
-                                    {qArr[curretnQ].alternative.map(alt => {
+                                {questionsArray[curretnQ].q}
+                                <select onChange={(e) => onChange({ id: questionsArray[curretnQ].id, answer: e.target.value, right: questionsArray[curretnQ].answer, score: e.target.value === questionsArray[curretnQ].answer ? 1 : 0 })}  >
+                                    <option > Select ...</option>
+                                    {questionsArray[curretnQ].alternative.map(alt => {
                                         return (
                                             <>
-                                                <option defaultValue={alt} value={alt}>{alt}</option>
+                                                <option value={alt}> {alt}</option>
                                             </>
                                         )
                                     })}
                                 </select>
                             </label>
-                            <button onClick={() => onNext({ qId: qArr[curretnQ].id })}>{curretnQ === questionNr - 1 ? "Submit" : "Next"}</button>
+                            <button onClick={() => onNext({ qId: questionsArray[curretnQ].id })}>{curretnQ === questionNr - 1 ? "Submit" : "Next"}</button>
                         </>
-
                 }
-                {/* {qArr.map(q => {
-                    return (
-                        <label>
-                            {q.q}
-                            <select >
-                                {q.alternative.map(alt => {
-                                    return (
-                                        <option value={alt}>{alt}</option>
-                                    )
-                                })}
-                            </select>
-                        </label>
-                    )
-                })} */}
             </form>
         </div>
     )

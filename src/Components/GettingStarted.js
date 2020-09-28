@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 function Welcome(props) {
 
     return (
-        <div className="App">
-            <h1>welcome</h1>
+        <div >
+            <h2>Let's have fun, start quiz!</h2>
             <button onClick={() => props.setPage(props.page + 1)}>Next</button>
 
         </div>
@@ -27,19 +27,18 @@ function UserInfo(props) {
         <>
             <label>
                 Name:
-        <input value={props.username} onChange={(e) => props.setUsername(e.target.value)} required />
-
+                <input value={props.username} onChange={(e) => props.setUsername(e.target.value)} required />
             </label>
+
             <label>
                 Current Level:
-            <select value={props.currentLevel} onChange={(e) => props.setLevel(e.target.value)}>
-                    {/* <option value="" defaultChecked disabled hidden>Select Here</option> */}
-
+                 <select value={props.currentLevel} onChange={(e) => props.setLevel(e.target.value)}>
                     <option value="Beginner">Beginner</option>
                     <option value="Average">Average</option>
                     <option value="Advance">Advance</option>
                 </select>
             </label>
+            
             <button onClick={() => props.setPage(props.page + 1)}>Next</button>
             <button onClick={() => props.setPage(props.page - 1)}>Prev</button>
         </>
